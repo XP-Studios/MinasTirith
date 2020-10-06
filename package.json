@@ -1,0 +1,8 @@
+{
+"name": "minastirith-discord-bot",
+"version": "0.0.0",
+"description": "Lord of the Rings Discord Bot",
+"main": "main.js",
+"author": "XP_Studios",
+"dependencies": {}
+}

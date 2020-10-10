@@ -13,11 +13,12 @@ client.on('message', msg => {
 	}
 	
 	if (msg.content === '.help'){
-		msg.channel.send('```.help```');
-		msg.channel.send('```.gandalf the white```');
-		msg.channel.send('```.bookquote```');
-		msg.channel.send('```.insult```');
-		msg.channel.send('```.lotrfact```');
+		msg.channel.send('`.help`');
+		msg.channel.send('`.gandalf the white`');
+		msg.channel.send('`.bookquote`');
+		msg.channel.send('`.insult`');
+		msg.channel.send('`.lotrfact`');
+		msg.channel.send('`.invite`');
 	}
 	
 	if (msg.content === '.bookquote'){
@@ -80,7 +81,7 @@ client.on('message', msg => {
 		}
 	}
 	
-	if(msg.content === ".lotrfact"){
+	if(msg.content === '.lotrfact'){
 		var fact = Math.floor((Math.random() * 20) + 1);
 		switch(fact){
 			case 1:
@@ -146,6 +147,9 @@ client.on('message', msg => {
 		}
 	}
 		
+	if(msg.content === '.invite'){
+		msg.channel.send('https://discord.com/oauth2/authorize?&client_id=762340407882285066&scope=bot&permissions=8');
+	}
 		
 });
 client.login('<This section contains the token, which must be kept private for security reasons>'); //keep at end

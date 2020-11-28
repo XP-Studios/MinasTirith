@@ -155,4 +155,4 @@ client.on('message', msg => {
 	}
 		
 });
-client.login('NzYyMzQwNDA3ODgyMjg1MDY2.X3nu1A.bIp18zW_J8U7SpyeGGyV0eunl6s'); //keep at end
+client.login('<this section contains the token, which must be kept private for security reasons>'); //keep at end

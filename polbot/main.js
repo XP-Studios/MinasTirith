@@ -48,4 +48,4 @@ client.on('message', msg => {
 	
 
 });
-client.login('NzgwMTM2MDUzNTMyMTMxMzg4.X7qsUQ.3Rruy4FtOJoGRL2k2VL7azGxq-M'); //keep at end
+client.login('<this section contains the token which must be kept private for security reasons>'); //keep at end

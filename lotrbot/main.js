@@ -1,6 +1,3 @@
-const Discord = require('discord.js');  //discord api library
-const client = new Discord.Client();
-const auth = require('./auth.json');  //authentication file
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
@@ -11,17 +8,11 @@ client.on('message', msg => {
 	}
 	
 	if (msg.content === '.coders'){
-		msg.channel.send("XP_Studios and Estel");
+		msg.channel.send("XP_Studios and OCTAVIAN, with creative help from Estel");
 	}
 	
 	if (msg.content === '.help'){
-		msg.channel.send('`.help`');
-		msg.channel.send('`.gandalf the white`');
-		msg.channel.send('`.bookquote`');
-		msg.channel.send('`.insult`');
-		msg.channel.send('`.lotrfact`');
-		msg.channel.send('`.invite`');
-		msg.channel.send('`.coders`');
+		msg.channel.send('```.help, .gandalf the white, .bookquote, .insult, .lotrfact, .invite, .coders```'); //from octavian
 	}
 	
 	if (msg.content === '.bookquote'){

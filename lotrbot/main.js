@@ -1,3 +1,7 @@
+const char = require('./character')
+
+const getEmbed = require('./embeds')
+
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
@@ -8,7 +12,7 @@ client.on('message', msg => {
 	}
 	
 	if (msg.content === '.coders'){
-		msg.channel.send("XP_Studios and OCTAVIAN, with creative help from Estel");
+		msg.channel.send("XP_Studios and OCTAVIAN; Idea by Estel.");
 	}
 	
 	if (msg.content === '.help'){
@@ -144,6 +148,11 @@ client.on('message', msg => {
 	if(msg.content === '.invite'){
 		msg.channel.send('https://discord.com/oauth2/authorize?&client_id=762340407882285066&scope=bot&permissions=8');
 	}
-		
+	
+	if(msg.content === '.char'){
+		msg.channel.send(
+			getEmbed(char.gandalf)
+		);
+	}
 });
 client.login('<this section contains the token, which must be kept private for security reasons>'); //keep at end

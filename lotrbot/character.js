@@ -1,5 +1,6 @@
 module.exports = {
     gandalf: {
-        title: 'Gandalf'
+        title: 'Gandalf',
+        info: 'test'
     }
 }

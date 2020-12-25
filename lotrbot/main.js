@@ -1,26 +1,22 @@
-const char = require('./character')
-
-const getEmbed = require('./embeds')
-
+const Discord = require('discord.js');  //discord api library
+const client = new Discord.Client();  //bot client
+const auth = require('./auth.json');  //authentication file
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 client.on('message', msg => {
-  
-	if (msg.content === '.gandalf the white'){
-		msg.channel.send('Gandalf the Fool!');
-	}
 	
 	if (msg.content === '.coders'){
 		msg.channel.send("XP_Studios and OCTAVIAN; Idea by Estel.");
 	}
 	
 	if (msg.content === '.help'){
-		msg.channel.send('```.help, .gandalf the white, .bookquote, .insult, .lotrfact, .invite, .coders```'); //from octavian
+		msg.channel.send('**Commands for Minas Tirith**');
+		msg.channel.send('```.help, .bookquote, .insult, .lotrfact, .invite, .coders```');
 	}
 	
 	if (msg.content === '.bookquote'){
-		var bookquote = Math.floor((Math.random() * 4) + 1);
+		var bookquote = Math.floor((Math.random() * 4) + 1); //keep * <number> at number of quotes
 		switch(bookquote){
 			case 1:
 				msg.channel.send('So do all who live to see such times, but that is not for them to decide. All we have to decide is what to do with the time that is given to us. -Gandalf');
@@ -38,7 +34,7 @@ client.on('message', msg => {
 	}
 	
 	if(msg.content === '.insult'){
-		var insult = Math.floor((Math.random() * 12) + 1);
+		var insult = Math.floor((Math.random() * 12) + 1);  //keep * <number> at number of quotes
 		switch(insult){
 			case 1:
 				msg.channel.send('Begone, foul dwimmerlaik, lord of carrion!');
@@ -80,7 +76,7 @@ client.on('message', msg => {
 	}
 	
 	if(msg.content === '.lotrfact'){
-		var fact = Math.floor((Math.random() * 20) + 1);
+		var fact = Math.floor((Math.random() * 20) + 1); //keep * <number> at number of quotes
 		switch(fact){
 			case 1:
 				msg.channel.send('J.R.R. Tolkien, the author of Lord of the Rings didnt invent the Elvish languages to fit into the Lord of the Rings timeline, but wrote Lord of the Rings as a background history for the 15 different languages he created.');
@@ -149,10 +145,5 @@ client.on('message', msg => {
 		msg.channel.send('https://discord.com/oauth2/authorize?&client_id=762340407882285066&scope=bot&permissions=8');
 	}
 	
-	if(msg.content === '.char'){
-		msg.channel.send(
-			getEmbed(char.gandalf)
-		);
-	}
-});
+
 client.login('<this section contains the token, which must be kept private for security reasons>'); //keep at end
